@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms" x:Class="UserProfile.Views.EditProfilePage">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="20, 80, 20, 20" Android="20, 80, 20, 20" WinPhone="20, 80, 20, 20" />
+	</ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout Padding="10,20,10,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical">
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Full Name:" HorizontalOptions="Start" Font="Bold" />
+				<Entry Text="{Binding UserProfile.FullName}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Username:" HorizontalOptions="Start" Font="Bold" />
+				<Entry Text="{Binding UserProfile.UserName}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Age:" HorizontalOptions="Start" Font="Bold" />
+				<Entry Text="{Binding UserProfile.Age}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Occupation:" HorizontalOptions="Start" Font="Bold" />
+				<Entry Text="{Binding UserProfile.Occupation}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Twitter Handle:" HorizontalOptions="Start" Font="Bold" />
+				<Entry Text="{Binding UserProfile.TwitterHandled}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Github:" HorizontalOptions="Start" Font="Bold" />
+				<Entry Text="{Binding UserProfile.GithubUrl}" HorizontalOptions="FillAndExpand" />
+			</StackLayout>
+			<Button Text="Save" Command="{Binding SaveCommand}"/>
+			<Button Text="Cancel" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
